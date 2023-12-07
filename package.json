@@ -1,0 +1,78 @@
+{
+  "name": "@tb-dev/utility-types",
+  "version": "1.0.0",
+  "description": "Utility types for Typescript",
+  "license": "MIT",
+  "type": "module",
+  "private": false,
+  "packageManager": "pnpm@8.11.0",
+  "homepage": "https://tb.dev.br/utility-types/",
+  "author": {
+    "name": "Andrew Ferreira",
+    "email": "andrew.shien2@gmail.com",
+    "url": "https://github.com/ferreira-tb"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferreira-tb/utility-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ferreira-tb/utility-types/issues"
+  },
+  "keywords": [
+    "utility types",
+    "typescript"
+  ],
+  "lint-staged": {
+    "*.{?(c|m)@(j|t)s,css,vue,md,json}": "prettier --write",
+    "*.{?(c|m)@(j|t)s,vue}": "pnpm lint"
+  },
+  "scripts": {
+    "build": "pnpm rollup",
+    "deps": "pnpm exec taze -w -f -l",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs && pnpm docs:typedoc",
+    "docs:preview": "vitepress preview docs",
+    "docs:typedoc": "pnpm exec typedoc --plugin typedoc-plugin-mdn-links",
+    "format": "pnpm exec prettier . --write",
+    "format-check": "pnpm exec prettier . --check",
+    "lint": "eslint . --config eslint.config.js --cache",
+    "prepare": "husky install",
+    "rollup": "rollup --config rollup.config.js",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@octokit/core": "^5.0.2",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@tb-dev/eslint-config": "^1.4.3",
+    "@types/node": "^20.10.4",
+    "eslint": "^8.55.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.0",
+    "rollup": "^4.6.1",
+    "taze": "^0.13.0",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.2",
+    "typedoc": "^0.25.4",
+    "typedoc-plugin-mdn-links": "^3.1.6",
+    "typescript": "5.3.3",
+    "vite": "^5.0.6",
+    "vite-plugin-dts": "^3.6.4",
+    "vitepress": "1.0.0-rc.31",
+    "vue": "^3.3.10"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  }
+}

@@ -1,61 +1,38 @@
-// #region ExtractPartial
-type ExtractPartial<T, K extends keyof T> = Partial<T>[K];
-// #endregion ExtractPartial
+export type ExtractPartial<T, K extends keyof T> = Partial<T>[K];
 
-// #region ExtractRequired
-type ExtractRequired<T, K extends keyof T> = Required<T>[K];
-// #endregion ExtractRequired
+export type ExtractRequired<T, K extends keyof T> = Required<T>[K];
 
-// #region MaybeArray
-type MaybeArray<T> = T | T[];
-// #endregion MaybeArray
+/** Something may or may not be an array. */
+export type MaybeArray<T> = T | T[];
 
-// #region MaybePromise
-type MaybePromise<T> = T | PromiseLike<T>;
-// #endregion MaybePromise
+/** Something may or may not be a promise. */
+export type MaybePromise<T> = T | PromiseLike<T>;
 
-// #region Nullish
-type Nullish<T> = T | null | undefined;
-// #endregion Nullish
+/** Something may be nullish. */
+export type Nullish<T> = T | null | undefined;
 
-// #region PartialNullish
-type PartialNullish<T> = {
+/** Constructs a type where all properties of `T` may be nullish. */
+export type PartialNullish<T> = {
   [P in keyof T]?: Nullish<T[P]>;
 };
-// #endregion PartialNullish
 
-// #region PickByValue
-type PickByValue<T, V> = {
+/**
+ * Like `Pick`, but constructs the type based on the values.
+ */
+export type PickByValue<T, V> = {
   [P in keyof T as T[P] extends V ? P : never]: T[P];
 };
-// #endregion PickByValue
 
-// #region PickPartial
-type PickPartial<T, K extends keyof T> = Pick<Partial<T>, K>;
-// #endregion PickPartial
+/** Constructs a type by picking the set of properties `K` from a partial version of `T`. */
+export type PickPartial<T, K extends keyof T> = Pick<Partial<T>, K>;
 
-// #region PickRequired
-type PickRequired<T, K extends keyof T> = Pick<Required<T>, K>;
-// #endregion PickRequired
+/** Constructs a type by picking the set of properties `K` from a required version of `T`. */
+export type PickRequired<T, K extends keyof T> = Pick<Required<T>, K>;
 
-// #region WithPartial
-type WithPartial<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
-// #endregion WithPartial
+/** Constructs a type consisting of some properties of T set to partial. */
+export type WithPartial<T, K extends keyof T> = Omit<T, K> &
+  Partial<Pick<T, K>>;
 
-// #region WithRequired
-type WithRequired<T, K extends keyof T> = Omit<T, K> & Required<Pick<T, K>>;
-// #endregion WithRequired
-
-export type {
-  ExtractPartial,
-  ExtractRequired,
-  MaybeArray,
-  MaybePromise,
-  Nullish,
-  PartialNullish,
-  PickByValue,
-  PickPartial,
-  PickRequired,
-  WithPartial,
-  WithRequired
-};
+/** Constructs a type consisting of some properties of T set to partial. */
+export type WithRequired<T, K extends keyof T> = Omit<T, K> &
+  Required<Pick<T, K>>;

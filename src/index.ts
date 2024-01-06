@@ -11,7 +11,7 @@ type MaybeArray<T> = T | T[];
 // #endregion MaybeArray
 
 // #region MaybePromise
-type MaybePromise<T> = T | Promise<T>;
+type MaybePromise<T> = T | PromiseLike<T>;
 // #endregion MaybePromise
 
 // #region Nullish

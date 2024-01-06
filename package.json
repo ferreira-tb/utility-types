@@ -1,11 +1,11 @@
 {
   "name": "@tb-dev/utility-types",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utility types for Typescript",
   "license": "MIT",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@8.13.1",
+  "packageManager": "pnpm@8.14.0",
   "homepage": "https://tb.dev.br/utility-types/",
   "author": {
     "name": "Andrew Ferreira",
@@ -28,8 +28,8 @@
     "*.{?(c|m)@(j|t)s,vue}": "pnpm lint"
   },
   "scripts": {
-    "build": "pnpm rollup",
-    "bump": "miho bump --add . --no-ask",
+    "build": "rollup --config rollup.config.js",
+    "bump": "miho bump -k -a .",
     "deps": "taze -w -f -l",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs && pnpm docs:typedoc",
@@ -39,27 +39,26 @@
     "format-check": "prettier . --check",
     "lint": "eslint . --config eslint.config.js --cache",
     "prepare": "husky install",
-    "rollup": "rollup --config rollup.config.js",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.5",
-    "@tb-dev/eslint-config": "^1.5.8",
+    "@tb-dev/eslint-config": "^1.5.11",
     "@types/node": "^20.10.6",
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
-    "rollup": "^4.9.2",
+    "rollup": "^4.9.3",
     "taze": "^0.13.1",
     "tslib": "^2.6.2",
-    "typedoc": "^0.25.4",
+    "typedoc": "^0.25.6",
     "typedoc-plugin-mdn-links": "^3.1.10",
     "typescript": "5.3.3",
-    "vite": "^5.0.10",
+    "vite": "^5.0.11",
     "vite-plugin-dts": "^3.7.0",
-    "vitepress": "1.0.0-rc.34",
-    "vue": "^3.4.3"
+    "vitepress": "1.0.0-rc.35",
+    "vue": "^3.4.5"
   },
   "files": [
     "dist"

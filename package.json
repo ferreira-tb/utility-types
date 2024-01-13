@@ -1,11 +1,11 @@
 {
   "name": "@tb-dev/utility-types",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Utility types for Typescript",
   "license": "MIT",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@8.14.0",
+  "packageManager": "pnpm@8.14.1",
   "homepage": "https://tb.dev.br/utility-types/",
   "author": {
     "name": "Andrew Ferreira",
@@ -39,22 +39,21 @@
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.5",
-    "@tb-dev/eslint-config": "^1.5.11",
-    "@types/node": "^20.10.6",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@tb-dev/eslint-config": "^1.5.15",
+    "@types/node": "^20.11.0",
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
-    "prettier": "^3.1.1",
-    "rollup": "^4.9.4",
+    "prettier": "^3.2.1",
+    "rollup": "^4.9.5",
     "taze": "^0.13.1",
     "tslib": "^2.6.2",
-    "typedoc": "^0.25.6",
-    "typedoc-plugin-mdn-links": "^3.1.10",
+    "typedoc": "^0.25.7",
+    "typedoc-plugin-mdn-links": "^3.1.11",
     "typescript": "5.3.3",
     "vite": "^5.0.11",
-    "vite-plugin-dts": "^3.7.0",
-    "vue": "^3.4.5"
+    "vite-plugin-dts": "^3.7.0"
   },
   "files": [
     "dist"

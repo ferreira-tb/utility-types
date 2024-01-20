@@ -4,11 +4,17 @@ export type ExtractPartial<T, K extends keyof T> = Partial<T>[K];
 
 export type ExtractRequired<T, K extends keyof T> = Required<T>[K];
 
-/** Something may or may not be an array. */
+/** Something may be an array. */
 export type MaybeArray<T> = T | T[];
 
-/** Something may or may not be a promise. */
+/** Something may be an array or a Set. */
+export type MaybeArrayOrSet<T> = MaybeArray<T> | MaybeSet<T>;
+
+/** Something may be a promise. */
 export type MaybePromise<T> = T | PromiseLike<T>;
+
+/** Something may be a Set. */
+export type MaybeSet<T> = T | Set<T>;
 
 /** Something may be nullish. */
 export type Nullish<T> = T | null | undefined;

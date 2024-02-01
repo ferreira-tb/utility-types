@@ -1,11 +1,11 @@
 {
   "name": "@tb-dev/utility-types",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Utility types for Typescript",
   "license": "MIT",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@8.14.1",
+  "packageManager": "pnpm@8.15.1",
   "homepage": "https://tb.dev.br/utility-types/",
   "author": {
     "name": "Andrew Ferreira",
@@ -35,23 +35,23 @@
     "format-check": "prettier . --check",
     "lint": "eslint . --config eslint.config.js --cache",
     "prepare": "husky install",
-    "release": "pnpm run build && pnpm run bump && pnpm publish",
+    "release": "pnpm run build && pnpm publish",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@tb-dev/eslint-config": "^1.6.5",
-    "@types/node": "^20.11.5",
+    "@tb-dev/eslint-config": "^1.7.0",
+    "@types/node": "^20.11.15",
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
-    "lint-staged": "^15.2.0",
+    "lint-staged": "^15.2.1",
     "prettier": "^3.2.4",
-    "taze": "^0.13.1",
+    "taze": "^0.13.2",
     "tslib": "^2.6.2",
     "typedoc": "^0.25.7",
-    "typedoc-plugin-mdn-links": "^3.1.12",
+    "typedoc-plugin-mdn-links": "^3.1.14",
     "typescript": "5.3.3",
     "vite": "^5.0.12",
-    "vite-plugin-dts": "^3.7.1"
+    "vite-plugin-dts": "^3.7.2"
   },
   "files": [
     "dist"

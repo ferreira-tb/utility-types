@@ -1,8 +1,3 @@
-export interface ElementSize {
-  height: number;
-  width: number;
-}
-
 export interface ElementBounding {
   bottom: number;
   height: number;
@@ -12,4 +7,14 @@ export interface ElementBounding {
   width: number;
   x: number;
   y: number;
+}
+
+export interface ElementPosition {
+  x: number;
+  y: number;
+}
+
+export interface ElementSize {
+  height: number;
+  width: number;
 }

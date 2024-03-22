@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/utility-types",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Utility types for Typescript",
   "license": "MIT",
   "type": "module",

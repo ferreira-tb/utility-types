@@ -17,6 +17,7 @@ coverage
 .eslintcache
 **/.vitepress/temp
 **/.vitepress/cache
+**/*vite*timestamp*
 
 # Editor directories and files
 .vscode/*

@@ -1,5 +1,3 @@
-export type * from './dom';
-
 export type ExtractPartial<T, K extends keyof T> = Partial<T>[K];
 
 export type ExtractRequired<T, K extends keyof T> = Required<T>[K];

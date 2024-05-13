@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       '@tb-dev/eslint-config':
-        specifier: ^3.5.1
+        specifier: ^3.6.0
         version: 3.6.0(eslint@8.57.0)(typescript@5.4.5)
       '@types/node':
         specifier: ^20.12.11
@@ -33,7 +33,7 @@ importers:
         specifier: ^0.25.13
         version: 0.25.13(typescript@5.4.5)
       typedoc-plugin-mdn-links:
-        specifier: ^3.1.24
+        specifier: ^3.1.25
         version: 3.1.25(typedoc@0.25.13(typescript@5.4.5))
       typescript:
         specifier: ^5.4.5

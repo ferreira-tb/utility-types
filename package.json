@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/utility-types",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Utility types for Typescript",
   "license": "MIT",
   "type": "module",
@@ -40,8 +40,8 @@
     "update": "miho update major -t"
   },
   "devDependencies": {
-    "@tb-dev/eslint-config": "^3.8.0",
-    "@types/node": "^20.14.2",
+    "@tb-dev/eslint-config": "^3.8.2",
+    "@types/node": "^20.14.5",
     "eslint": "^8.57.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",

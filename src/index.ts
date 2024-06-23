@@ -2,6 +2,8 @@ export type ExtractPartial<T, K extends keyof T> = Partial<T>[K];
 
 export type ExtractRequired<T, K extends keyof T> = Required<T>[K];
 
+export type Fn = () => void;
+
 /** Something may be an array. */
 export type MaybeArray<T> = T | T[];
 

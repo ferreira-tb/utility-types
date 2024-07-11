@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/utility-types",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Utility types for Typescript",
   "license": "MIT",
   "type": "module",
@@ -56,14 +56,10 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "types": "./dist/index.d.ts"
     }
   }
 }
